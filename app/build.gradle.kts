@@ -1,9 +1,19 @@
 import java.time.ZonedDateTime
+import java.util.Properties
 import java.time.format.DateTimeFormatter
 
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+}
+
+/*
+ * Release signing: keystore.properties in the project root (not in git), with
+ * storeFile, storePassword, keyAlias and keyPassword. Without it the release
+ * build is left unsigned (for F-Droid and others who sign it themselves).
+ */
+val keystoreProps = rootProject.file("keystore.properties").takeIf { it.isFile }?.let { f ->
+    Properties().apply { f.inputStream().use { load(it) } }
 }
 
 android {
@@ -20,9 +30,24 @@ android {
         versionName = "0.912"
     }
 
+    signingConfigs {
+        if (keystoreProps != null) {
+            create("release") {
+                storeFile = file(keystoreProps.getProperty("storeFile"))
+                storePassword = keystoreProps.getProperty("storePassword")
+                keyAlias = keystoreProps.getProperty("keyAlias")
+                keyPassword = keystoreProps.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            // R8: shrinks the app from ~30 MB (debug) to a few MB.
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.findByName("release")
         }
     }
     compileOptions {

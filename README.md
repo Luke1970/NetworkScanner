@@ -46,6 +46,11 @@ Allow installing from that source when Android asks.
 - Printer ports 9100-9103 and LPD port 515 are not probed, because a printer
   prints whatever is sent to them. They are listed by port number only.
 
+## Privacy
+
+The app collects, stores and shares nothing, and talks only to the local
+network. See the [privacy policy](https://sc00by.nl/software/NetworkScanner/privacy.html).
+
 ## Building
 
 You need JDK 17 or later and the Android SDK (`sdk.dir` in
@@ -53,6 +58,18 @@ You need JDK 17 or later and the Android SDK (`sdk.dir` in
 
     ./gradlew assembleDebug          # app/build/outputs/apk/debug/
     ./gradlew testDebugUnitTest      # unit tests
+    ./gradlew bundleRelease          # app/build/outputs/bundle/release/ (Google Play)
+    ./gradlew assembleRelease        # app/build/outputs/apk/release/
+
+The release build is shrunk with R8. It is signed when `keystore.properties`
+(not in git) exists in the project root:
+
+    storeFile=/path/to/upload.jks
+    storePassword=...
+    keyAlias=upload
+    keyPassword=...
+
+Without that file the release build is unsigned.
 
 `tools/update-oui.py` rebuilds the vendor list
 (`app/src/main/assets/oui.dat`) from the IEEE registry.

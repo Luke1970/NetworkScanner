@@ -9,3 +9,6 @@ captures/
 .cxx/
 dist/
 *.swp
+keystore.properties
+*.jks
+*.keystore
