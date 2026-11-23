@@ -1,0 +1,32 @@
+Network Scanner laat zien wat er op je netwerk zit en hoe je telefoon verbonden is. Geen advertenties, geen tracking, geen account: alles blijft op je telefoon.
+
+LOKAAL NETWERK SCANNEN
+• Vindt de apparaten op je wifi-netwerk, ook apparaten die verbindingen weigeren
+• Toont de naam van elk apparaat, via mDNS/Bonjour, NetBIOS en UPnP
+• Toont het MAC-adres en de fabrikant, uit de ingebouwde IEEE-fabrikantenlijst
+• Toont open poorten en de diensten daarachter; tik op een webinterface, gedeelde map of andere link om die te openen
+• Doet een onderbouwde gok naar het besturingssysteem, op basis van TTL en andere aanwijzingen
+• Vindt ook IPv6-buren
+
+JE VERBINDING
+• IP-adressen, gateway, DNS-servers en DHCP-gegevens
+• Wifi: de huidige verbinding, en netwerken in de buurt met signaal, kanaal en hoe druk elk kanaal is
+• Mobiel netwerk: netwerktype (GPRS, EDGE, LTE, 5G), de cel waarmee je verbonden bent en de band
+• Bluetooth: de naam van deze telefoon, en gekoppelde en verbonden apparaten
+
+PRIVACY
+Network Scanner praat alleen met je lokale netwerk. De app maakt geen contact met servers op internet en slaat niets op of deelt niets. Resultaten verdwijnen als je de app sluit.
+
+TOESTEMMINGEN
+• Locatie: Android vereist dit voor de wifi-scan en voor de gegevens van de mobiele cel. Je locatie wordt niet bepaald of opgeslagen.
+• Telefoonstatus: om het precieze type mobiel netwerk te tonen.
+• Apparaten in de buurt: voor de Bluetooth-gegevens.
+Je kunt elk van deze weigeren. De app toont dan minder, maar blijft werken.
+
+GOED OM TE WETEN
+• Android staat maximaal 4 wifi-scans per 2 minuten toe.
+• Sommige apparaten verbergen zich achter een stealth-firewall, en sommige netwerken blokkeren scannen.
+• Windows-pc's reageren niet op de IPv6-scan. Ze verschijnen alleen als ze zichzelf aankondigen via mDNS.
+• Printerpoorten (9100-9103, 515) worden nooit getest, omdat een printer alles afdrukt wat ernaar gestuurd wordt.
+
+Open source (GPL-3.0): https://github.com/Luke1970/NetworkScanner

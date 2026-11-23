@@ -1,0 +1,32 @@
+Network Scanner shows what is on your network and how your phone is connected. No ads, no tracking, no account: everything stays on your phone.
+
+LOCAL NETWORK SCAN
+• Finds the devices on your Wi-Fi network, including devices that refuse connections
+• Shows each device's name, from mDNS/Bonjour, NetBIOS and UPnP
+• Shows the MAC address and the manufacturer, from the built-in IEEE vendor list
+• Shows open ports and the services behind them; tap a web interface, file share or other link to open it
+• Makes an educated guess of the operating system, from TTL and other clues
+• Finds IPv6 neighbours too
+
+YOUR CONNECTION
+• IP addresses, gateway, DNS servers and DHCP details
+• Wi-Fi: the current connection, plus nearby networks with signal, channel and how busy each channel is
+• Mobile network: network type (GPRS, EDGE, LTE, 5G), serving cell and band
+• Bluetooth: this phone's name, and paired and connected devices
+
+PRIVACY
+Network Scanner talks only to your local network. It does not contact any server on the internet, and it does not store or share anything. Results disappear when you close the app.
+
+PERMISSIONS
+• Location: Android requires it for the Wi-Fi scan and for mobile cell details. Your location is not determined or stored.
+• Phone state: to show the exact mobile network type.
+• Nearby devices: for the Bluetooth information.
+You can refuse any of these. The app then shows less, but keeps working.
+
+GOOD TO KNOW
+• Android allows at most 4 Wi-Fi scans every 2 minutes.
+• Some devices hide behind a stealth firewall, and some networks block scanning.
+• Windows PCs do not answer the IPv6 scan. They only show up when they announce themselves via mDNS.
+• Printer ports (9100-9103, 515) are never probed, because a printer would print whatever is sent to it.
+
+Open source (GPL-3.0): https://github.com/Luke1970/NetworkScanner
