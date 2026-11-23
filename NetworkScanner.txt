@@ -1,0 +1,18 @@
+Author: (C) Lucien van Lint
+Email:  lucien@sc00by.nl
+Version: "Version and date"
+
+Network Scanner that provides basic information your mobile network, data connection, WIFI and bluetooth. It lists all detected IP clients.
+
+Known bugs/ anomalies/ Permissions needed:
+-Reported OS is an educated guess based on TTL and other parameters.
+-Some devices, connected to the scanned network,  stay hidden behind a stealth firewall.
+-Needs access to network.
+-Needs location access for the WIFI scan.
+-Needs phone state access for the exact mobile network type (GPRS, EDGE, LTE, 5G); granted automatically on Android 13+, asked via a button on older versions.
+-Needs location access for the mobile serving cell details (cell ID, band).
+-Needs Bluetooth access ("Nearby devices") for the Bluetooth device name and the paired and connected devices.
+-Android has a time based scan limit. (4 scans per 2 minutes)
+-Some networks appear to detect and block scanning.
+-Windows PCs do not answer the IPv6 scan (multicast ping); they only show up when they announce themselves via mDNS.
+-Printer ports 9100-9103 (and LPD port 515) are not probed, because a printer prints whatever is sent to them; they are listed by port number only.
