@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <rect width="1024" height="500" fill="#FFD600"/>
+  <!-- scan rings around the icon -->
+  <g fill="none" stroke="#000" stroke-opacity="0.08" stroke-width="3">
+    <circle cx="215" cy="250" r="150"/>
+    <circle cx="215" cy="250" r="215"/>
+    <circle cx="215" cy="250" r="280"/>
+    <circle cx="215" cy="250" r="345"/>
+  </g>
+  <!-- the app icon: one computer wired to three others -->
+  <g transform="translate(215 250) scale(4.2) translate(-54 -52.5)">
+    <path fill="#000" fill-rule="evenodd" d="M44,30h20v14h-20z M46.5,32.5h15v9h-15z M52.5714,44h2.85714v3h-2.85714z M48,47h12v2h-12z M29,61h14v10h-14z M31,63h10v6h-10z M35,71h2v2h-2z M32,73h8v2h-8z M47,61h14v10h-14z M49,63h10v6h-10z M53,71h2v2h-2z M50,73h8v2h-8z M65,61h14v10h-14z M67,63h10v6h-10z M71,71h2v2h-2z M68,73h8v2h-8z"/>
+    <path fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="square" d="M54,49V56 M36,56H72 M36,56V61 M54,56V61 M72,56V61"/>
+  </g>
+  <g font-family="Noto Sans" fill="#000">
+    <text x="410" y="228" font-size="60" font-weight="800" letter-spacing="-1">Network Scanner</text>
+    <text x="412" y="284" font-size="30" font-weight="500">Every device on your network</text>
+    <text x="412" y="330" font-size="21" font-weight="400" fill-opacity="0.7">Names · vendors · ports · Wi-Fi · mobile · Bluetooth</text>
+  </g>
+</svg>
